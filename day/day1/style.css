@@ -1,0 +1,24 @@
+body {
+  background-color: linear-gradient(135deg, #2c4799, #6ca1cc, #6cccc6);
+}
+
+.parrafo {
+  color: darkslategrey;
+  font-size: 30px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande";
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  background-color: brown;
+}
+
+.div1 {
+  text-align: center;
+}
+
+img {
+  width: 300px;
+  border-radius: 50px;
+}

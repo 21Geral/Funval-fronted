@@ -1,0 +1,146 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #161d25;
+}
+.header1 {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  list-style: none;
+  color: #929294;
+  position: relative;
+  right: 10px;
+  padding: 5px;
+}
+.header1 img {
+  width: 100px;
+}
+
+.header2 img {
+  width: 110px;
+  position: relative;
+  left: 10px;
+}
+
+.header2 {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 8px;
+  color: #ffffff;
+}
+nav {
+  padding-bottom: 20px;
+  padding-top: 10px;
+}
+
+.highlight {
+  color: #0077b6;
+  text-decoration: underline;
+}
+
+main {
+  background-image: url("./fondo.png");
+  min-height: 100vh;
+  display: flex;
+  position: relative;
+  background-size: cover;
+}
+
+form {
+  color: #c6d4df;
+  position: absolute;
+  top: 5%;
+  left: 10%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.email,
+select {
+  background-color: #33353c;
+  border: none;
+  padding: 5px;
+  width: 100%;
+}
+select,
+option {
+  color: #c6d4df;
+}
+form div {
+  display: flex;
+  flex-direction: column;
+  padding: 5%;
+}
+
+.fakecahe {
+  padding-top: 10%;
+}
+
+.finalpart {
+  position: absolute;
+  top: 45%;
+  left: 11%;
+}
+
+button {
+  background: linear-gradient(90deg, #06bfff, #2d73ff);
+  color: #c6d4df;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 2px;
+  width: 25%;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+label {
+  color: #c6d4df;
+}
+.checkbox {
+  display: flex;
+  align-items: flex-start;
+  color: #c6d4df;
+  font-size: 13px;
+}
+
+.accept {
+  padding: 10px;
+}
+
+.checkbox a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.checkbox a:hover {
+  color: #00adee;
+}
+
+.continue {
+  background: linear-gradient(to bottom, #00adee, #0077b6);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 3px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.continue:hover {
+  background: linear-gradient(to bottom, #66c0f4, #417a9b);
+}
+
+footer {
+  background-color: #171a20;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}

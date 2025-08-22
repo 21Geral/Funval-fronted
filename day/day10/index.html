@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./output.css" />
+    <title>Make up store</title>
+  </head>
+  <body class="h-full w-full">
+    <header class="bg-black h-20 flex items-center text-2xl justify-around">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="size-8 text-white md:hidden"
+      >
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+      </svg>
+
+      <img src="./logo.png" alt="" class="h-full" />
+      <ul class="gap-8 text-2xl hidden sm:flex text-white">
+        <li>Productos</li>
+        <li>Ofertas</li>
+        <li>Contacto</li>
+      </ul>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-8 text-white">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M15.75 10.5V6a3.75 3.75 0 1 0-7.5 0v4.5m11.356-1.993 1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 0 1-1.12-1.243l1.264-12A1.125 1.125 0 0 1 5.513 7.5h12.974c.576 0 1.059.435 1.119 1.007ZM8.625 10.5a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm7.5 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Z"
+        />
+      </svg>
+    </header>
+    <main class="text-black h-full w-full bg-[#FAEDF3] grid gap-10">
+      <section class="hero h-[54.5rem] bg-[url('./background.jpg')] bg-cover bg-center flex flex-col justify-center items-center text-2xl">
+        <h1 class="text-4xl md:text-6xl font-bold text-white mb-4">Beauty that inspires</h1>
+        <p class="text-lg md:text-xl text-white max-w-xl font-bold text-center">
+          Discover makeup products that enhance your unique style. Professional quality, vibrant colors, and formulas that care for your skin.
+        </p>
+      </section>
+      <div class="cards flex flex-col items-center justify-center gap-8 sm:grid sm:grid-cols-2 sm:place-items-center lg:grid-cols-3 md:gap-8">
+        <div class="w-80 h-120 bg-white flex justify-center items-center flex-col text-2xl sm:w-48 sm:h-80 md:w-64">
+          <img
+            class="h-[70%] bg-center bg-cover w-full"
+            src="https://kyliecosmetics.com/cdn/shop/files/KJC_SPRINGCOL_WSQ_25_Stylized_09097e84-313c-4bd9-aaaf-86e29e2fb4f9_800x.jpg?v=1748881089"
+            alt=""
+          />
+          <div class="h-[30%] flex items-center flex-col p-1 gap-1 sm:text-[16px]">
+            <h2 class="">Name</h2>
+            <p class="">Price: 12$</p>
+            <button class="border-2 rounded-md p-1 px-3">Buy</button>
+          </div>
+        </div>
+        <div class="w-80 h-120 bg-white flex justify-center items-center flex-col text-2xl sm:w-48 sm:h-80 md:w-64">
+          <img
+            class="h-[70%] bg-center bg-cover w-full"
+            src="https://kyliecosmetics.com/cdn/shop/files/KJS_LIB_24_VanillaCaramel_Stylized_Closed_800x.jpg?v=1752094667"
+            alt=""
+          />
+          <div class="h-[30%] flex items-center flex-col p-1 gap-1 sm:text-[16px]">
+            <h2 class="">Name</h2>
+            <p class="">Price: 12$</p>
+            <button class="border-2 rounded-md p-1 px-3">Buy</button>
+          </div>
+        </div>
+        <div class="w-80 h-120 bg-white flex justify-center items-center flex-col text-2xl sm:w-48 sm:h-80 md:w-64">
+          <img
+            class="h-[70%] bg-center bg-cover w-full"
+            src="https://kyliecosmetics.com/cdn/shop/files/KJC_HB_25_SummerSorbet_Stylized_800x.jpg?v=1747339652"
+            alt=""
+          />
+          <div class="h-[30%] flex items-center flex-col p-1 gap-1 sm:text-[16px]">
+            <h2 class="">Name</h2>
+            <p class="">Price: 12$</p>
+            <button class="border-2 rounded-md p-1 px-3">Buy</button>
+          </div>
+        </div>
+        <div class="w-80 h-120 bg-white flex justify-center items-center flex-col text-2xl sm:w-48 sm:h-80 md:w-64">
+          <img
+            class="h-[70%] bg-center bg-cover w-full"
+            src="https://kyliecosmetics.com/cdn/shop/files/KJC_PPMT_24_LoveLetter_Stylized_a7545824-47cf-4b02-b482-79d171e1b1b7_800x.jpg?v=1727902223"
+            alt=""
+          />
+          <div class="h-[30%] flex items-center flex-col p-1 gap-1 sm:text-[16px]">
+            <h2 class="">Name</h2>
+            <p class="">Price: 12$</p>
+            <button class="border-2 rounded-md p-1 px-3">Buy</button>
+          </div>
+        </div>
+        <div class="w-80 h-120 bg-white flex justify-center items-center flex-col text-2xl sm:w-48 sm:h-80 md:w-64">
+          <img
+            class="h-[70%] bg-center bg-cover w-full"
+            src="https://kyliecosmetics.com/cdn/shop/files/KJC_KSHAD_MKPAL_23_Stylized_800x.jpg?v=1723047981"
+            alt=""
+          />
+          <div class="h-[30%] flex items-center flex-col p-1 gap-1 sm:text-[16px]">
+            <h2 class="">Name</h2>
+            <p class="">Price: 12$</p>
+            <button class="border-2 rounded-md p-1 px-3">Buy</button>
+          </div>
+        </div>
+        <div class="w-80 h-120 bg-white flex justify-center items-center flex-col text-2xl sm:w-48 sm:h-80 md:w-64">
+          <img
+            class="h-[70%] bg-center bg-cover w-full"
+            src="https://kyliecosmetics.com/cdn/shop/files/v1_Kylash-_SE_-Brown_black_710f4925-6346-422e-8947-d9fce25728f1_800x.jpg?v=1753211420"
+            alt=""
+          />
+          <div class="h-[30%] flex items-center flex-col p-1 gap-1 sm:text-[16px]">
+            <h2 class="">Name</h2>
+            <p class="">Price: 12$</p>
+            <button class="border-2 rounded-md p-1 px-3">Buy</button>
+          </div>
+        </div>
+      </div>
+      <div class="offer bg-pink-100 w-full h-[45rem]">
+        <img class="bg-cover bg-center w-full h-full block md:hidden" src="./offer.png" alt="" />
+        <img class="bg-cover bg-center w-full h-full hidden md:block" src="./offer2.png" alt="" />
+      </div>
+      <div class="dancetime cards flex flex-col items-center justify-center gap-8 md:flex-row md:gap-40">
+        <div class="w-80 h-60 bg-[#cb9a9f] flex justify-center items-center text-2xl sm:w-96">
+          <img class="bg-cover bg-center w-full h-full" src="https://floraison.com.ua/content/images/3/720x648e90nn0/78753108569840.jpg" alt="" />
+        </div>
+
+        <div class="w-80 h-60 bg-[#cb9a9f] flex justify-center items-center text-2xl sm:w-96">
+          <img
+            class="bg-cover bg-center w-full h-full"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7O1lMDWZ09aYDgzcxvbXmpXtmeyGmesEVDPkIcDCsXXocXGSZUSWoeffE2wh8l7o05P0&usqp=CAU"
+            alt=""
+          />
+        </div>
+      </div>
+      <div class="contact bg-[url('./contact2.webp')] bg-center bg-cover w-auto h-150 flex justify-center items-center">
+        <div class="flex flex-col items-center justify-center h-screen dark">
+          <div class="w-full max-w-md bg-gray-400 rounded-lg shadow-md p-6">
+            <h2 class="text-2xl font-bold text-gray-200 mb-4">Subscribe to get last offers</h2>
+
+            <form class="flex flex-col">
+              <input
+                placeholder="Enter your email address"
+                class="bg-gray-500 text-gray-200 border-0 rounded-md p-2 mb-4 focus:bg-gray-600 focus:outline-none focus:ring-1 focus:ring-blue-500 transition ease-in-out duration-150"
+                type="email"
+              />
+
+              <button class="bg-pink-300 text-white font-bold py-2 px-4 rounded-md mt-4 hover:bg-pink-600">Subscribe</button>
+            </form>
+
+            <div class="flex justify-center mt-4">
+              <a class="text-sm text-gray-400 hover:underline" href="#">Privacy Policy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="bg-pink-800 h-20">pie</footer>
+  </body>
+</html>

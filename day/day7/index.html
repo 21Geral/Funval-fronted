@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./output.css" />
+    <title>Active states</title>
+  </head>
+  <body class="h-screen flex justify-center items-center flex-col gap-4 bg-[#6850c9] m-0 p-0">
+    <!-- <div class="flex items-center justify-center group">
+      <img src="./img2.png" alt="" class="h-[500px] block group-hover:hidden" />
+      <img src="./img3.png" alt="" class="h-[500px] hidden group-hover:block" />
+    </div> -->
+    <form action="" class="flex flex-col gap-4 bg-[#f7f6f6] text-[#6b52c9] p-4 rounded-2xl">
+      <label for="">Apellido de la Familia</label>
+      <input
+        class="bg-gray-300 p-0.5 rounded-md focus:outline-2 focus:outline-violet-600 focus:outline-offset-2"
+        type="text"
+        placeholder=" Ingrese Apellido"
+      />
+      <label for="">Cantidad de personas en la familia</label>
+      <input
+        class="bg-gray-300 p-0.5 rounded-md focus:outline-2 focus:outline-violet-600 focus:outline-offset-2"
+        type="number"
+        name=""
+        placeholder="Ingrese cantidad"
+      />
+      <label for="">Correo</label>
+      <input type="email" placeholder="Ingrese correo" />
+      <label for="Hora y fecha">Fecha y hora</label>
+      <input
+        class="bg-gray-300 p-0.5 rounded-md focus:outline-2 focus:outline-violet-600 focus:outline-offset-2"
+        type="datetime-local"
+        name=""
+        id=""
+      />
+      <select name="" id="">
+        <option>--Selecciona una estaca--</option>
+        <option value="Callao">Argentina</option>
+        <option value="Heros">Bolivia</option>
+        <option value="La Chalaca">Colombia</option>
+        <option value="La Punta">Ecuador</option>
+        <option value="Santa Marina">Perú</option>
+      </select>
+      <button class="bg-[#9ad8ff] hover:bg-[#172545] rounded-2xl">Enviar</button>
+    </form>
+  </body>
+</html>

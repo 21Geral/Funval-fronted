@@ -1,16 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="todo" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portafolio</title>
+    <link rel="stylesheet" href="./output.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Mi Portafolio</title>
   </head>
-  <body>
-    <div>
-      <a href="./Practice/practice1/Index.html">Clic aqui para ir a la Practicas Calificada 1</a>
-      <br />
-      <a href="./Practice/practice2/index.html">Clic aqui para ir a la Practicas Calificada 2</a>
-      <a href="./day/day10/index.html">Make store</a>
-    </div>
+  <body class="relative min-h-screen flex flex-col">
+    <video
+      autoplay
+      muted
+      loop
+      class="fixed top-0 left-0 w-full h-full object-cover -z-10 transition-opacity duration-1000 ease-in-out dark:opacity-0 opacity-100"
+    >
+      <source src="./img/light.mp4" type="video/mp4" />
+      Tu navegador no soporta videos HTML5.
+    </video>
+    <video
+      autoplay
+      muted
+      loop
+      class="fixed top-0 left-0 w-full h-full object-cover -z-10 transition-opacity duration-1000 ease-in-out dark:opacity-100 opacity-0"
+    >
+      <source src="./img/dark.mp4" type="video/mp4" />
+      Tu navegador no soporta videos HTML5.
+    </video>
+
+    <header class="flex p-4 justify-end">
+      <!-- From Uiverse.io by jubayer-10 -->
+      <label class="inline-flex items-center relative">
+        <input class="peer hidden" id="toggle" type="checkbox" />
+        <div
+          class="relative w-[110px] h-[50px] bg-[#c89a7c] peer-checked:bg-zinc-500 rounded-full after:absolute after:content-[''] after:block after:w-[40px] after:h-[40px] after:bg-gradient-to-r after:from-orange-500 after:to-yellow-400 peer-checked:after:from-zinc-900 peer-checked:after:to-zinc-900 after:rounded-full after:top-[5px] after:left-[5px] active:after:w-[50px] peer-checked:after:left-[105px] peer-checked:after:translate-x-[-100%] shadow-sm duration-300 after:duration-300 after:shadow-md"
+        ></div>
+        <svg
+          height="0"
+          width="100"
+          viewBox="0 0 24 24"
+          data-name="Layer 1"
+          id="Layer_1"
+          xmlns="http://www.w3.org/2000/svg"
+          class="fill-white peer-checked:opacity-60 absolute w-6 h-6 left-[13px]"
+        >
+          <path
+            d="M12,17c-2.76,0-5-2.24-5-5s2.24-5,5-5,5,2.24,5,5-2.24,5-5,5ZM13,0h-2V5h2V0Zm0,19h-2v5h2v-5ZM5,11H0v2H5v-2Zm19,0h-5v2h5v-2Zm-2.81-6.78l-1.41-1.41-3.54,3.54,1.41,1.41,3.54-3.54ZM7.76,17.66l-1.41-1.41-3.54,3.54,1.41,1.41,3.54-3.54Zm0-11.31l-3.54-3.54-1.41,1.41,3.54,3.54,1.41-1.41Zm13.44,13.44l-3.54-3.54-1.41,1.41,3.54,3.54,1.41-1.41Z"
+          ></path>
+        </svg>
+        <svg
+          height="512"
+          width="512"
+          viewBox="0 0 24 24"
+          data-name="Layer 1"
+          id="Layer_1"
+          xmlns="http://www.w3.org/2000/svg"
+          class="fill-black opacity-60 peer-checked:opacity-70 peer-checked:fill-white absolute w-6 h-6 right-[13px]"
+        >
+          <path
+            d="M12.009,24A12.067,12.067,0,0,1,.075,10.725,12.121,12.121,0,0,1,10.1.152a13,13,0,0,1,5.03.206,2.5,2.5,0,0,1,1.8,1.8,2.47,2.47,0,0,1-.7,2.425c-4.559,4.168-4.165,10.645.807,14.412h0a2.5,2.5,0,0,1-.7,4.319A13.875,13.875,0,0,1,12.009,24Zm.074-22a10.776,10.776,0,0,0-1.675.127,10.1,10.1,0,0,0-8.344,8.8A9.928,9.928,0,0,0,4.581,18.7a10.473,10.473,0,0,0,11.093,2.734.5.5,0,0,0,.138-.856h0C9.883,16.1,9.417,8.087,14.865,3.124a.459.459,0,0,0,.127-.465.491.491,0,0,0-.356-.362A10.68,10.68,0,0,0,12.083,2ZM20.5,12a1,1,0,0,1-.97-.757l-.358-1.43L17.74,9.428a1,1,0,0,1,.035-1.94l1.4-.325.351-1.406a1,1,0,0,1,1.94,0l.355,1.418,1.418.355a1,1,0,0,1,0,1.94l-1.418.355-.355,1.418A1,1,0,0,1,20.5,12ZM16,14a1,1,0,0,0,2,0A1,1,0,0,0,16,14Zm6,4a1,1,0,0,0,2,0A1,1,0,0,0,22,18Z"
+          ></path>
+        </svg>
+      </label>
+    </header>
+    <main
+      class="flex-1 flex flex-col justify-center items-center text-center font-bold text-white text-shadow-lg/50"
+      style="font-family: Lora, system-ui"
+    >
+      <div class="flex items-center">
+        <img class="lg:w-auto lg:h-72" src="./img/titulo1.png" alt="tittle" />
+        <img class="hidden h-96 lg:block rounded-2xl" src="./img/perfil4.png" alt="perfil1" />
+      </div>
+      <p class="text-2xl p-4" style="font-family: Lora, system-ui">
+        Frontend Developer enfocado en construir aplicaciones web interactivas y responsivas que unen diseño y tecnología
+      </p>
+      <a
+        class="text-2xl p-2 transition-transform duration-300 hover:scale-120 hover:text-orange-800 dark:hover:text-cyan-400"
+        id="habilidades"
+        href=""
+      >
+        Habilidades
+      </a>
+      <a class="text-2xl p-2 transition-transform duration-300 hover:scale-120 hover:text-orange-800 dark:hover:text-cyan-400" id="proyectos" href="">
+        Proyectos
+      </a>
+      <a class="text-2xl p-2 transition-transform duration-300 hover:scale-120 hover:text-orange-800 dark:hover:text-cyan-400" id="contactos" href="">
+        Contactos
+      </a>
+    </main>
+    <footer></footer>
+    <script>
+      let todo = document.querySelector("#todo");
+      let botoncito = document.querySelector("#toggle");
+      botoncito.addEventListener("click", function () {
+        todo.classList.toggle("dark");
+      });
+    </script>
   </body>
 </html>

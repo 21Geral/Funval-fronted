@@ -10,9 +10,9 @@
       href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
       rel="stylesheet"
     />
-    <title>Mi Portafolio</title>
+    <title>Portafolio</title>
   </head>
-  <body class="relative min-h-screen">
+  <body class="relative min-h-screen" style="font-family: Lora, system-ui">
     <video
       autoplay
       muted
@@ -32,8 +32,45 @@
       Tu navegador no soporta videos HTML5.
     </video>
 
-    <header class="flex p-4 justify-end">
-      <!-- From Uiverse.io by jubayer-10 -->
+    <header class="flex p-4 justify-between text-white">
+      <div class="flex-row md:gap-8 lg:gap-16 sm:flex hidden p-4">
+        <a
+          class="text-2xl p-2 transition-transform duration-300 hover:scale-120 hover:border-2 hover:rounded-xl hover:text-[#FFD7A3] dark:hover:text-cyan-400"
+          href="#habilidades"
+        >
+          Habilidades
+        </a>
+        <a
+          class="text-2xl p-2 transition-transform duration-300 hover:scale-120 hover:border-2 hover:rounded-xl hover:text-[#FFD7A3] dark:hover:text-cyan-400"
+          href="#proyectos"
+        >
+          Proyectos
+        </a>
+        <a
+          class="text-2xl p-2 transition-transform duration-300 hover:scale-120 hover:border-2 hover:rounded-xl hover:text-[#FFD7A3] dark:hover:text-cyan-400"
+          href="#practicas"
+        >
+          Funval
+        </a>
+        <a
+          class="text-2xl p-2 transition-transform duration-300 hover:scale-120 hover:border-2 hover:rounded-xl hover:text-[#FFD7A3] dark:hover:text-cyan-400"
+          href="#contactos"
+        >
+          Contactos
+        </a>
+      </div>
+      <svg
+        class="sm:hidden h-12 w-12 cursor-pointer"
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="size-6"
+      >
+        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+      </svg>
+
       <label class="inline-flex items-center relative">
         <input class="peer hidden" id="toggle" type="checkbox" />
         <div
@@ -67,37 +104,21 @@
         </svg>
       </label>
     </header>
-    <main
-      class="h-screen flex-1 flex flex-col justify-center items-center text-center font-bold text-white text-shadow-lg/50 gap-4"
-      style="font-family: Lora, system-ui"
-    >
-      <div class="flex items-center">
+    <main class="h-screen flex flex-col justify-center items-center text-center font-bold text-white text-shadow-lg/50 gap-4">
+      <div class="flex items-center justify-center">
         <img class="lg:w-auto lg:h-72" src="./img/titulo1.png" alt="tittle" />
         <img class="hidden h-96 lg:block rounded-2xl" src="./img/perfil.png" alt="perfil1" />
       </div>
-      <p class="text-2xl p-4" style="font-family: Lora, system-ui">
-        Frontend Developer enfocado en construir aplicaciones web interactivas y responsivas que unen diseño y tecnología
-      </p>
-      <div class="flex flex-col lg:flex-row lg:gap-16">
-        <a class="text-2xl p-2 transition-transform duration-300 hover:scale-120 hover:text-orange-800 dark:hover:text-cyan-400" href="#habilidades">
-          Habilidades
-        </a>
-        <a class="text-2xl p-2 transition-transform duration-300 hover:scale-120 hover:text-orange-800 dark:hover:text-cyan-400" href="#proyectos">
-          Proyectos
-        </a>
-        <a class="text-2xl p-2 transition-transform duration-300 hover:scale-120 hover:text-orange-800 dark:hover:text-cyan-400" href="#contactos">
-          Contactos
-        </a>
-        <a class="text-2xl p-2 transition-transform duration-300 hover:scale-120 hover:text-orange-800 dark:hover:text-cyan-400" href="#practicas">
-          Practicas Calificadas de Funval
-        </a>
-      </div>
+      <p class="text-2xl p-4">Frontend Developer enfocado en construir aplicaciones web interactivas y responsivas que unen diseño y tecnología</p>
+      <a
+        href="./img/CV GERALDINE REVILLA.pdf"
+        target="_blank"
+        class="transition-transform duration-300 hover:scale-120 text-2xl p-4 cursor-pointer hover:text-[#FFD7A3] dark:hover:text-cyan-400"
+      >
+        Currículum vitae
+      </a>
     </main>
-    <section
-      id="habilidades"
-      class="min-h-screen flex flex-col justify-center items-center text-center text-white dark:text-black font-bold"
-      style="font-family: Lora, system-ui"
-    >
+    <section id="habilidades" class="min-h-screen flex flex-col justify-center items-center text-center text-white dark:text-black font-bold">
       <img class="lg:w-auto lg:h-72 mb-10 mx-auto block" src="./img/habilidades.png" alt="habilidades" />
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
         <div
@@ -147,7 +168,8 @@
       <img class="lg:w-auto lg:h-72 m-10 mx-auto block" src="./img/proyectos.png" alt="proyectos" />
       <div class="grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-6">
         <a
-          href="#"
+          href="./Practice/practice1/Index.html"
+          target="_blank"
           class="bg-black/50 dark:bg-white/50 flex flex-col items-center justify-center p-4 rounded-xl sm:p-7 w-[400px] h-[250px] transform transition-transform duration-300 hover:scale-105 hover:shadow-lg dark:shadow-cyan-500/30 shadow-[#C68346]"
         >
           <img src="./img/proyecto1.png" class="w-[300px]" />
@@ -156,7 +178,7 @@
           </div>
         </a>
         <a
-          href="#"
+          href="./Practice/practice2/index.html"
           class="bg-black/50 dark:bg-white/50 flex flex-col items-center justify-center p-4 rounded-xl sm:p-7 w-[400px] h-[250px] transform transition-transform duration-300 hover:scale-105 hover:shadow-lg dark:shadow-cyan-500/30 shadow-[#C68346]"
         >
           <img src="./img/proyecto2.png" class="w-[300px]" />
@@ -188,17 +210,27 @@
           target="_blank"
           class="bg-black/50 dark:bg-white/50 flex flex-col items-center justify-center p-4 rounded-xl sm:p-7 w-[400px] h-[250px] transform transition-transform duration-300 hover:scale-105 hover:shadow-lg dark:shadow-cyan-500/30 shadow-[#C68346]"
         >
+          <img src="./img/proyecto1.png" class="w-[300px]" />
           <div class="dark:text-white">
             <h1 class="font-bold text-2xl">Practica Calificada 1</h1>
           </div>
         </a>
         <a
-          href="./Practice/practice2/index.html"
+          href="./practice/practice3/index.html"
           target="_blank"
           class="bg-black/50 dark:bg-white/50 flex flex-col items-center justify-center p-4 rounded-xl sm:p-7 w-[400px] h-[250px] transform transition-transform duration-300 hover:scale-105 hover:shadow-lg dark:shadow-cyan-500/30 shadow-[#C68346]"
         >
           <div class="dark:text-white">
             <h1 class="font-bold text-2xl">Practica Calificada 2</h1>
+          </div>
+        </a>
+        <a
+          href="./Practice/practice3/index.html"
+          target="_blank"
+          class="bg-black/50 dark:bg-white/50 flex flex-col items-center justify-center p-4 rounded-xl sm:p-7 w-[400px] h-[250px] transform transition-transform duration-300 hover:scale-105 hover:shadow-lg dark:shadow-cyan-500/30 shadow-[#C68346]"
+        >
+          <div class="dark:text-white">
+            <h1 class="font-bold text-2xl">Practica Calificada 3</h1>
           </div>
         </a>
         <a

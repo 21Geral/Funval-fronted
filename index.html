@@ -10,6 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap"
       rel="stylesheet"
     />
+    <script src="./main.js" defer type="module"></script>
     <title>Portafolio</title>
   </head>
   <body class="relative min-h-screen" style="font-family: Lora, system-ui">
@@ -32,44 +33,55 @@
       Tu navegador no soporta videos HTML5.
     </video>
 
-    <header class="flex p-4 justify-between text-white">
-      <div class="flex-row md:gap-8 lg:gap-16 sm:flex hidden p-4">
-        <a
-          class="text-2xl p-2 transition-transform duration-300 hover:scale-120 hover:border-2 hover:rounded-xl hover:text-[#FFD7A3] dark:hover:text-cyan-400"
-          href="#habilidades"
+    <header class="flex p-4 justify-between text-white items-center relative">
+      <div class="relative">
+        <svg
+          id="menu"
+          class="sm:hidden h-12 w-12 cursor-pointer"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-6"
         >
-          Habilidades
-        </a>
-        <a
-          class="text-2xl p-2 transition-transform duration-300 hover:scale-120 hover:border-2 hover:rounded-xl hover:text-[#FFD7A3] dark:hover:text-cyan-400"
-          href="#proyectos"
-        >
-          Proyectos
-        </a>
-        <a
-          class="text-2xl p-2 transition-transform duration-300 hover:scale-120 hover:border-2 hover:rounded-xl hover:text-[#FFD7A3] dark:hover:text-cyan-400"
-          href="#practicas"
-        >
-          Funval
-        </a>
-        <a
-          class="text-2xl p-2 transition-transform duration-300 hover:scale-120 hover:border-2 hover:rounded-xl hover:text-[#FFD7A3] dark:hover:text-cyan-400"
-          href="#contactos"
-        >
-          Contactos
-        </a>
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+        </svg>
+        <ul class="navegador hidden absolute top-full left-0 w-full flex-col sm:static sm:flex sm:flex-row md:gap-8 lg:gap-16 p-4 gap-4">
+          <li>
+            <a
+              class="text-2xl p-2 transition-transform duration-300 hover:scale-120 hover:border-2 hover:rounded-xl hover:text-[#FFD7A3] dark:hover:text-cyan-400"
+              href="#habilidades"
+            >
+              Habilidades
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-2xl p-2 transition-transform duration-300 hover:scale-120 hover:border-2 hover:rounded-xl hover:text-[#FFD7A3] dark:hover:text-cyan-400"
+              href="#proyectos"
+            >
+              Proyectos
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-2xl p-2 transition-transform duration-300 hover:scale-120 hover:border-2 hover:rounded-xl hover:text-[#FFD7A3] dark:hover:text-cyan-400"
+              href="#practicas"
+            >
+              Funval
+            </a>
+          </li>
+          <li>
+            <a
+              class="text-2xl p-2 transition-transform duration-300 hover:scale-120 hover:border-2 hover:rounded-xl hover:text-[#FFD7A3] dark:hover:text-cyan-400"
+              href="#contactos"
+            >
+              Contactos
+            </a>
+          </li>
+        </ul>
       </div>
-      <svg
-        class="sm:hidden h-12 w-12 cursor-pointer"
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke-width="1.5"
-        stroke="currentColor"
-        class="size-6"
-      >
-        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
-      </svg>
 
       <label class="inline-flex items-center relative">
         <input class="peer hidden" id="toggle" type="checkbox" />
@@ -104,98 +116,32 @@
         </svg>
       </label>
     </header>
-    <main class="h-screen flex flex-col justify-center items-center text-center font-bold text-white text-shadow-lg/50 gap-4">
+    <main
+      class="h-screen flex flex-col justify-center items-center text-center font-bold text-white text-shadow-lg/50 gap-4 text-2xl md:text-3xl lg:text-4xl"
+    >
       <div class="flex items-center justify-center">
         <img class="lg:w-auto lg:h-72" src="./img/titulo1.png" alt="tittle" />
         <img class="hidden h-96 lg:block rounded-2xl" src="./img/perfil.png" alt="perfil1" />
       </div>
-      <p class="text-2xl p-4">Frontend Developer enfocado en construir aplicaciones web interactivas y responsivas que unen diseño y tecnología</p>
+      <p class="p-4">Frontend Developer enfocado en construir aplicaciones web interactivas y responsivas que unen diseño y tecnología</p>
       <a
         href="./img/CV GERALDINE REVILLA.pdf"
         target="_blank"
-        class="transition-transform duration-300 hover:scale-120 text-2xl p-4 cursor-pointer hover:text-[#FFD7A3] dark:hover:text-cyan-400"
+        class="transition-transform duration-300 hover:scale-120 p-4 cursor-pointer hover:text-[#FFD7A3] dark:hover:text-cyan-400"
       >
         Currículum vitae
       </a>
+      <a
+        href="./proyectos.html"
+        target="_blank"
+        class="transition-transform duration-300 hover:scale-120 p-4 cursor-pointer hover:text-[#FFD7A3] dark:hover:text-cyan-400"
+      >
+        Ver proyectos
+      </a>
     </main>
-    <section id="habilidades" class="min-h-screen flex flex-col justify-center items-center text-center text-white dark:text-black font-bold">
+    <section class="min-h-screen flex flex-col justify-center items-center text-center text-white dark:text-black font-bold">
       <img class="lg:w-auto lg:h-72 mb-10 mx-auto block" src="./img/habilidades.png" alt="habilidades" />
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-16">
-        <div
-          class="bg-black/50 dark:bg-white/50 md:text-2xl flex flex-col items-center justify-center p-4 rounded-xl size-52 md:size-60 lg:size-80 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg shadow-[#C68346] dark:shadow-cyan-500/30"
-        >
-          <img src="./img/html.png" class="w-32 lg:w-40 rounded-2xl mb-2" alt="" />
-          HTML
-        </div>
-        <div
-          class="bg-black/50 dark:bg-white/50 md:text-2xl flex flex-col items-center justify-center p-4 rounded-xl size-52 md:size-60 lg:size-80 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg shadow-[#C68346] dark:shadow-cyan-500/30"
-        >
-          <img src="./img/css.png" class="w-32 lg:w-40 rounded-2xl mb-2" alt="" />
-          CSS
-        </div>
-        <div
-          class="bg-black/50 dark:bg-white/50 md:text-2xl flex flex-col items-center justify-center p-4 rounded-xl size-52 md:size-60 lg:size-80 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg shadow-[#C68346] dark:shadow-cyan-500/30"
-        >
-          <img src="./img/Tailwind.png" class="w-32 lg:w-40 rounded-2xl mt-8 mb-8" alt="" />
-          Tailwind
-        </div>
-        <div
-          class="bg-black/50 dark:bg-white/50 md:text-2xl flex flex-col items-center justify-center p-4 rounded-xl size-52 md:size-60 lg:size-80 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg shadow-[#C68346] dark:shadow-cyan-500/30"
-        >
-          <img src="./img/js.png" class="w-32 lg:w-40 rounded-2xl mb-2" alt="" />
-          Javascript
-        </div>
-        <div
-          class="bg-black/50 dark:bg-white/50 md:text-2xl flex flex-col items-center justify-center p-4 rounded-xl size-52 md:size-60 lg:size-80 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg shadow-[#C68346] dark:shadow-cyan-500/30"
-        >
-          <img src="./img/figma.png" class="w-24 lg:w-32 rounded-2xl mb-2" alt="" />
-          Figma
-        </div>
-        <div
-          class="bg-black/50 dark:bg-white/50 md:text-2xl flex flex-col items-center justify-center p-4 rounded-xl size-52 md:size-60 lg:size-80 transform transition-transform duration-300 hover:scale-105 hover:shadow-lg shadow-[#C68346] dark:shadow-cyan-500/30"
-        >
-          <img src="./img/ingles.png" class="w-32 lg:w-40 rounded-2xl mb-6" alt="" />
-          Inglés
-        </div>
-      </div>
-    </section>
-
-    <section
-      id="proyectos"
-      class="min-h-screen flex flex-col justify-center items-center text-center text-white dark:text-black"
-      style="font-family: Lora, system-ui"
-    >
-      <img class="lg:w-auto lg:h-72 m-10 mx-auto block" src="./img/proyectos.png" alt="proyectos" />
-      <div class="grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-6">
-        <a
-          href="./Practice/practice1/Index.html"
-          target="_blank"
-          class="bg-black/50 dark:bg-white/50 flex flex-col items-center justify-center p-4 rounded-xl sm:p-7 w-[400px] h-[250px] transform transition-transform duration-300 hover:scale-105 hover:shadow-lg dark:shadow-cyan-500/30 shadow-[#C68346]"
-        >
-          <img src="./img/proyecto1.png" class="w-[300px]" />
-          <div class="dark:text-white">
-            <h1 class="font-bold text-2xl">HTML + CSS</h1>
-          </div>
-        </a>
-        <a
-          href="./Practice/practice2/index.html"
-          class="bg-black/50 dark:bg-white/50 flex flex-col items-center justify-center p-4 rounded-xl sm:p-7 w-[400px] h-[250px] transform transition-transform duration-300 hover:scale-105 hover:shadow-lg dark:shadow-cyan-500/30 shadow-[#C68346]"
-        >
-          <img src="./img/proyecto2.png" class="w-[300px]" />
-          <div class="dark:text-white">
-            <h1 class="font-bold text-2xl">HTML + CSS</h1>
-          </div>
-        </a>
-        <a
-          href="#"
-          class="bg-black/50 dark:bg-white/50 flex flex-col items-center justify-center p-4 rounded-xl sm:p-7 w-[400px] h-[250px] transform transition-transform duration-300 hover:scale-105 hover:shadow-lg dark:shadow-cyan-500/30 shadow-[#C68346]"
-        >
-          <img src="./img/proyecto3.png" class="w-[300px]" />
-          <div class="dark:text-white">
-            <h1 class="font-bold text-2xl">HTML + CSS</h1>
-          </div>
-        </a>
-      </div>
+      <div id="habilidades" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-16"></div>
     </section>
 
     <section
@@ -204,7 +150,7 @@
       style="font-family: Lora, system-ui"
     >
       <img class="lg:w-auto lg:h-72 mb-10 mx-auto block" src="./img/practicas.png" alt="contacto" />
-      <div class="grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-6">
+      <div class="grid sm:grid-cols-1 md:grid-cols-1 lg:grid-cols-2 gap-6">
         <a
           href="./Practice/practice1/Index.html"
           target="_blank"
@@ -411,12 +357,5 @@
     </section>
 
     <footer></footer>
-    <script>
-      let todo = document.querySelector("#todo");
-      let botoncito = document.querySelector("#toggle");
-      botoncito.addEventListener("click", function () {
-        todo.classList.toggle("dark");
-      });
-    </script>
   </body>
 </html>

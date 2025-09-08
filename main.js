@@ -1,6 +1,9 @@
 import { funcionHabilidades } from "./habilidades.js";
 funcionHabilidades();
 
+import { funcionPracticas } from "./practicas.js";
+funcionPracticas();
+
 let menu = document.querySelector("#menu");
 let navlist = document.querySelector(".navegador");
 
@@ -21,3 +24,11 @@ function darkmodeInit() {
 darkmodeInit();
 
 export { darkmodeInit };
+
+ScrollReveal().reveal(".reveal", {
+  duration: 2000,
+  origin: "left",
+  distance: "100px",
+  delay: 200,
+  reset: true,
+});

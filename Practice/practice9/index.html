@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./main.js" defer></script>
+    <title>Tic Tac Toe Fronted Mentor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+      .fade-in {
+        animation: fadeIn 0.5s ease-in-out;
+      }
+      .cell {
+        transition: all 0.2 ease;
+      }
+      .cell:hover:not(.disabled) {
+        transform: scale(1.05);
+      }
+      x.mark::before {
+        content: "";
+        position: absolute;
+        width: 80%;
+        height: 8px;
+        background-color: #3b82f6;
+        transform: rotate(45deg);
+        border-radius: 4px;
+      }
+      x.mark::after {
+        content: "";
+        position: absolute;
+        width: 80%;
+        height: 8px;
+        background-color: #3b82f6;
+        transform: rotate(-45deg);
+        border-radius: 4px;
+      }
+      .o-mark::before {
+        content: "";
+        position: absolute;
+        width: 60%;
+        height: 60%;
+        border: 8px solid #ef4444;
+        border-radius: 50%;
+      }
+      .bg-gradient {
+        background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+      }
+    </style>
+  </head>
+  <body class="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-4">
+    <div class="w-full max-w-3xl bg-white rounded-2xl overflow-hidden"></div>
+    <!-- Header -->
+    <div class="bg-gradient text-white p-6 text-center">
+      <h1 class="text-3xl md:text-4xl font-bold mb-2">Tic Tac Toe</h1>
+      <p class="opacity-90">The classic game with a modern twist</p>
+    </div>
+
+    <!-- Game Selector -->
+    <div id="game-selector" class="p-6 fade-in">
+      <div class="text-center mb-8">
+        <h2 class="text-2xl font-semibold text-gray-800 mb-4">Select Mode</h2>
+        <div class="flex flex-col md:flex-row gap-4 justify-center">
+          <button
+            id="friend-btn"
+            class="bg-blue-600 hover:bg-blue-700 text-white font-boldpy-4 px-6 rounded-lg shadow-md transition-all transform hover:scale-105 flex items-center justify-center"
+          >
+            <i class="fas fa-robot text-xl"></i>
+            <span>Play with Bot</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Game Board (Inicially Hidden) -->
+    <div id="game-container" class="hidden p-6 fade-in"></div>
+  </body>
+</html>

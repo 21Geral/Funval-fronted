@@ -34,6 +34,11 @@ let practicas = [
     href: "./Practice/practice8/index.html",
     img: "./img/proyecto8.png",
   },
+  {
+    name: "Practica Calificada 10",
+    href: "./Practice/practice9/index.html",
+    img: "./img/proyecto10.png",
+  },
 ];
 function funcionPracticas() {
   let containerPr = document.querySelector("#practicas");

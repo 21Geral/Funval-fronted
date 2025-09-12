@@ -56,30 +56,119 @@
     </style>
   </head>
   <body class="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-4">
-    <div class="w-full max-w-3xl bg-white rounded-2xl overflow-hidden"></div>
-    <!-- Header -->
-    <div class="bg-gradient text-white p-6 text-center">
-      <h1 class="text-3xl md:text-4xl font-bold mb-2">Tic Tac Toe</h1>
-      <p class="opacity-90">The classic game with a modern twist</p>
-    </div>
+    <div class="w-full max-w-3xl bg-white rounded-2xl overflow-hidden">
+      <!-- Header -->
+      <div class="bg-gradient text-white p-6 text-center">
+        <h1 class="text-3xl md:text-4xl font-bold mb-2">Tic Tac Toe</h1>
+        <p class="opacity-90">The classic game with a modern twist</p>
+      </div>
 
-    <!-- Game Selector -->
-    <div id="game-selector" class="p-6 fade-in">
-      <div class="text-center mb-8">
-        <h2 class="text-2xl font-semibold text-gray-800 mb-4">Select Mode</h2>
-        <div class="flex flex-col md:flex-row gap-4 justify-center">
-          <button
-            id="friend-btn"
-            class="bg-blue-600 hover:bg-blue-700 text-white font-boldpy-4 px-6 rounded-lg shadow-md transition-all transform hover:scale-105 flex items-center justify-center"
-          >
-            <i class="fas fa-robot text-xl"></i>
-            <span>Play with Bot</span>
-          </button>
+      <!-- Game Selector -->
+      <div id="game-selector" class="p-6 fade-in">
+        <div class="text-center mb-8">
+          <h2 class="text-2xl font-semibold text-gray-800 mb-4">Select Mode</h2>
+          <div class="flex flex-col md:flex-row gap-4 justify-center">
+            <button
+              id="friend-btn"
+              class="bg-blue-600 hover:bg-blue-700 text-white font-boldpy-4 px-6 rounded-lg shadow-md transition-all transform hover:scale-105 flex items-center justify-center gap-2"
+            >
+              <i class="fas fa-robot text-xl"></i>
+              <span>Play with Bot</span>
+            </button>
+            <button
+              id="bot-btn"
+              class="bg-blue-600 hover:bg-blue-700 text-white font-boldpy-4 px-6 rounded-lg shadow-md transition-all transform hover:scale-105 flex items-center justify-center gap-2"
+            >
+              <i class="fas fa-robot text-xl"></i>
+              <span>Play with bot</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Game Board (Inicially Hidden) -->
+      <div id="game-container" class="hidden p-6 fade-in">
+        <div class="flex flex-col md:flex-row gap-8">
+          <!-- Game info -->
+          <div class="w-full md:w-1/3 bg-gray-50 p-6 rounded-xl shadow-sm">
+            <div class="text-center mb-6">
+              <h3 class="text-xl font-semibold text-gray-800">Game Info</h3>
+            </div>
+            <div class="space-y-4">
+              <div class="bg-white p-4 rounded-lg shadow-xs border border-gray-200">
+                <h4 class="text-sm font-medium text-gray-500 mb-1">Current Turn</h4>
+                <p id="current-turn" class="text-xl font-bold text-gray-800 flex items-center gap-2">
+                  <i id="turn-icon" class="fas fa-user"></i>
+                  <span id="turn-text">Player</span>
+                </p>
+              </div>
+              <div class="bg-white p-4 rounded-lg shadow-xs border border-gray-200">
+                <h4 class="text-sm font-medium text-gray-500 mb-1">Game Mode</h4>
+                <p id="game-mode" class="text-lg font-medium text-gray-800 flex items-center gap-2">
+                  <i id="mode-icon" class="fas fa-users"></i>
+                  <span>Vs Friends</span>
+                </p>
+              </div>
+              <div class="bg-white p-4 rounded-lg shadow-xs border border-gray-200">
+                <h4 class="text-sm font-medium text-gray-500 mb-1">Scores</h4>
+                <div class="flex justify-between">
+                  <p class="text-blue-600 font-b flex items-center gap-1">
+                    <i class="fas fa-xmark"></i>
+                    <span id="x-score">0</span>
+                  </p>
+                  <p class="text-gray-500 font-medium">-</p>
+                  <p class="text-red-600 font-bold flex items-center gap-1">
+                    <i class="fas fa-o"></i>
+                    <span id="o-score">0</span>
+                  </p>
+                </div>
+              </div>
+              <button
+                id="restart-btn"
+                class="w-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-3 px-4 rounded-lg transition-colors flex items-center justify-center gap-2"
+              >
+                <i class="fas fa-redo"></i>
+                <span>Restart Game</span>
+              </button>
+              <button
+                id="new-game-btn"
+                class="w-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-3 px-4 rounded-lg transition-colors flex items-center justify-center gap-2"
+              >
+                <i class="fas fa-gamepad"></i>
+                <span>New Game</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Game Board -->
+          <div class="w-full md:w-2/3">
+            <div class="grid grid-cols-3 gap-4 aspect-square max-w-md mx-auto">
+              <!-- Cells will be generated by JS -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Winner Modal (Hidden) -->
+      <div id="winner-modal" class="fixed inset-0 bg-black bg-opacity-50 flex item justify-center p-4 z-50 hidden">
+        <div class="bg-white rounded-xl shadow-2xl max-w-md w-full p-8 text-center transform transition-all fade-in">
+          <div id="winner-icon" class="text-7xl mb-6 mx-auto w-24 h-24 flex items-center justify-center rounded-full bg-blue-100 text-blue-600">
+            <i class="fas fa-trophy"></i>
+          </div>
+          <h3 id="winner-text" class="text-2xl font-bold text-gray-800 mb-4">Player X Wins!</h3>
+          <p id="winner-message" class="text-gray-600 mb-6">Congratulations on your victory!</p>
+          <div class="flex gap-3 justify-center">
+            <button id="play-again-btn" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg flex items-center gap-2">
+              <i class="fas fa-redo"></i>
+              <span>Play Again</span>
+            </button>
+            <button id="home-btn" class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-3 px-6 rounded-lg flex items-center gap-2">
+              <i class="fas fa-home"></i>
+              <span>Main Menu</span>
+            </button>
+          </div>
         </div>
       </div>
     </div>
-
-    <!-- Game Board (Inicially Hidden) -->
-    <div id="game-container" class="hidden p-6 fade-in"></div>
   </body>
 </html>

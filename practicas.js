@@ -35,6 +35,11 @@ let practicas = [
     img: "./img/proyecto8.png",
   },
   {
+    name: "Practica Calificada 9",
+    href: "./Practice/practice9/index.html",
+    img: "./img/proyecto9.png",
+  },
+  {
     name: "Practica Calificada 10",
     href: "./Practice/practice9/index.html",
     img: "./img/proyecto10.png",

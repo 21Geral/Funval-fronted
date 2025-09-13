@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="./main.js" defer></script>
-    <link rel="stylesheet" href="./output.cssgit " />
+    <link rel="stylesheet" href="./output.css" />
     <title>Tic Tac Toe Fronted Mentor</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <style>
@@ -20,26 +20,26 @@
         animation: fadeIn 0.5s ease-in-out;
       }
       .cell {
-        transition: all 0.2 ease;
+        transition: all 0.2s ease;
       }
       .cell:hover:not(.disabled) {
         transform: scale(1.05);
       }
-      x.mark::before {
+      .x-mark::before {
         content: "";
         position: absolute;
         width: 80%;
         height: 8px;
-        background-color: #3b82f6;
+        background-color: #30c4c1;
         transform: rotate(45deg);
         border-radius: 4px;
       }
-      x.mark::after {
+      .x-mark::after {
         content: "";
         position: absolute;
         width: 80%;
         height: 8px;
-        background-color: #3b82f6;
+        background-color: #30c4c1;
         transform: rotate(-45deg);
         border-radius: 4px;
       }
@@ -48,37 +48,37 @@
         position: absolute;
         width: 60%;
         height: 60%;
-        border: 8px solid #ef4444;
+        border: 8px solid #f1b336;
         border-radius: 50%;
       }
       .bg-gradient {
-        background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        background: linear-gradient(135deg, #2f9899 0%, #30c4c1 100%);
       }
     </style>
   </head>
-  <body class="min-h-screen bg-gray-100 flex flex-col items-center justify-center p-4">
-    <div class="w-full max-w-3xl bg-white rounded-2xl overflow-hidden">
+  <body class="min-h-screen bg-[#1a2b32] flex flex-col items-center justify-center p-4">
+    <div class="w-full max-w-3xl bg-[#718d99] rounded-2xl overflow-hidden">
       <!-- Header -->
-      <div class="bg-gradient text-white p-6 text-center">
+      <div class="bg-[#1f3641] text-white p-6 text-center">
         <h1 class="text-3xl md:text-4xl font-bold mb-2">Tic Tac Toe</h1>
         <p class="opacity-90">The classic game with a modern twist</p>
       </div>
 
       <!-- Game Selector -->
-      <div id="gameSelector" class="p-6 fade-in">
+      <div id="gameSelector" class="p-6 fade-in bg-[#4c7e92]">
         <div class="text-center mb-8">
           <h2 class="text-2xl font-semibold text-gray-800 mb-4">Select Mode</h2>
           <div class="flex flex-col md:flex-row gap-4 justify-center">
             <button
               id="friendBtn"
-              class="bg-blue-600 hover:bg-blue-700 text-white font-boldpy-4 px-6 rounded-lg shadow-md transition-all transform hover:scale-105 flex items-center justify-center gap-2"
+              class="bg-[#f1b336] hover:bg-yellow-500 text-[#1f2a36] font-bold py-4 px-6 rounded-lg shadow-md transition-all transform hover:scale-105 flex items-center justify-center gap-2"
             >
               <i class="fas fa-robot text-xl"></i>
-              <span>Play with Bot</span>
+              <span>Play with Friend</span>
             </button>
             <button
               id="botBtn"
-              class="bg-blue-600 hover:bg-blue-700 text-white font-boldpy-4 px-6 rounded-lg shadow-md transition-all transform hover:scale-105 flex items-center justify-center gap-2"
+              class="bg-[#30c4c1] hover:bg-[#2f9899] text-[#1f2a36] font-bold py-4 px-6 rounded-lg shadow-md transition-all transform hover:scale-105 flex items-center justify-center gap-2"
             >
               <i class="fas fa-robot text-xl"></i>
               <span>Play with bot</span>
@@ -91,34 +91,34 @@
       <div id="gameContainer" class="hidden p-6 fade-in">
         <div class="flex flex-col md:flex-row gap-8">
           <!-- Game info -->
-          <div class="w-full md:w-1/3 bg-gray-50 p-6 rounded-xl shadow-sm">
+          <div class="w-full md:w-1/3 bg-[#1e3540] p-6 rounded-xl shadow-sm">
             <div class="text-center mb-6">
               <h3 class="text-xl font-semibold text-gray-800">Game Info</h3>
             </div>
             <div class="space-y-4">
-              <div class="bg-white p-4 rounded-lg shadow-xs border border-gray-200">
+              <div class="bg-gray-200 p-4 rounded-lg shadow-xs border">
                 <h4 class="text-sm font-medium text-gray-500 mb-1">Current Turn</h4>
                 <p id="currentTurn" class="text-xl font-bold text-gray-800 flex items-center gap-2">
                   <i id="turnIcon" class="fas fa-user"></i>
                   <span id="turnText">Player</span>
                 </p>
               </div>
-              <div class="bg-white p-4 rounded-lg shadow-xs border border-gray-200">
+              <div class="bg-gray-200 p-4 rounded-lg shadow-xs borde">
                 <h4 class="text-sm font-medium text-gray-500 mb-1">Game Mode</h4>
                 <p id="gameMode" class="text-lg font-medium text-gray-800 flex items-center gap-2">
                   <i id="modeIcon" class="fas fa-users"></i>
                   <span>Vs Friends</span>
                 </p>
               </div>
-              <div class="bg-white p-4 rounded-lg shadow-xs border border-gray-200">
+              <div class="bg-gray-200 p-4 rounded-lg shadow-xs border">
                 <h4 class="text-sm font-medium text-gray-500 mb-1">Scores</h4>
                 <div class="flex justify-between">
-                  <p class="text-blue-600 font-b flex items-center gap-1">
+                  <p class="text-[#30c4c1] font-b flex items-center gap-1">
                     <i class="fas fa-xmark"></i>
                     <span id="xScore">0</span>
                   </p>
                   <p class="text-gray-500 font-medium">-</p>
-                  <p class="text-red-600 font-bold flex items-center gap-1">
+                  <p class="text-[#f1b336] font-bold flex items-center gap-1">
                     <i class="fas fa-o"></i>
                     <span id="oScore">0</span>
                   </p>
@@ -126,14 +126,14 @@
               </div>
               <button
                 id="restartBtn"
-                class="w-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-3 px-4 rounded-lg transition-colors flex items-center justify-center gap-2"
+                class="w-full bg-gray-400 hover:bg-gray-500 text-gray-800 font-bold py-3 px-4 rounded-lg transition-colors flex items-center justify-center gap-2"
               >
                 <i class="fas fa-redo"></i>
                 <span>Restart Game</span>
               </button>
               <button
                 id="newGameBtn"
-                class="w-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-3 px-4 rounded-lg transition-colors flex items-center justify-center gap-2"
+                class="w-full bg-gray-400 hover:bg-gray-500 text-gray-800 font-bold py-3 px-4 rounded-lg transition-colors flex items-center justify-center gap-2"
               >
                 <i class="fas fa-gamepad"></i>
                 <span>New Game</span>
@@ -151,19 +151,19 @@
       </div>
 
       <!-- Winner Modal (Hidden) -->
-      <div id="winnerModal" class="fixed inset-0 bg-black bg-opacity-50 flex item justify-center p-4 z-50 hidden">
-        <div class="bg-white rounded-xl shadow-2xl max-w-md w-full p-8 text-center transform transition-all fade-in">
-          <div id="winnerIcon" class="text-7xl mb-6 mx-auto w-24 h-24 flex items-center justify-center rounded-full bg-blue-100 text-blue-600">
+      <div id="winnerModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50 hidden">
+        <div class="bg-gray-300 rounded-xl shadow-2xl max-w-md w-full p-8 text-center transform transition-all fade-in">
+          <div id="winnerIcon" class="text-7xl mb-6 mx-auto w-24 h-24 flex items-center justify-center rounded-full bg-blue-100 text-[#30c4c1]">
             <i class="fas fa-trophy"></i>
           </div>
           <h3 id="winnerText" class="text-2xl font-bold text-gray-800 mb-4">Player X Wins!</h3>
           <p id="winnerMessage" class="text-gray-600 mb-6">Congratulations on your victory!</p>
           <div class="flex gap-3 justify-center">
-            <button id="playAgainBtn" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-6 rounded-lg flex items-center gap-2">
+            <button id="playAgainBtn" class="bg-[#30c4c1] hover:bg-[#2f9899] text-white font-bold py-3 px-6 rounded-lg flex items-center gap-2">
               <i class="fas fa-redo"></i>
               <span>Play Again</span>
             </button>
-            <button id="homeBtn" class="bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-3 px-6 rounded-lg flex items-center gap-2">
+            <button id="homeBtn" class="bg-[#f1b336] hover:bg-yellow-500 text-gray-800 font-bold py-3 px-6 rounded-lg flex items-center gap-2">
               <i class="fas fa-home"></i>
               <span>Main Menu</span>
             </button>
@@ -171,279 +171,5 @@
         </div>
       </div>
     </div>
-
-    <script>
-      const gameSelector = document.querySelector("#gameSelector");
-      const gameContainer = document.querySelector("#gameContainer");
-      const friendBtn = document.querySelector("#friendBtn");
-      const botBtn = document.querySelector("#botBtn");
-      const restartBtn = document.querySelector("#restartBtn");
-      const newGameBtn = document.querySelector("#newGameBtn");
-      const winnerModal = document.querySelector("#winnerModal");
-      const playAgainBtn = document.querySelector("#playAgainBtn");
-      const homeBtn = document.querySelector("#homeBtn");
-      const currentTurn = document.querySelector("#currentTurn");
-      const turnText = document.querySelector("#turnText");
-      const turnIcon = document.querySelector("#turnIcon");
-      const gameMode = document.querySelector("#gameMode");
-      const modeIcon = document.querySelector("#modeIcon");
-      const xScoreElement = document.querySelector("#xScore");
-      const oScoreElement = document.querySelector("#oScore");
-      const winnerText = document.querySelector("#winnerText");
-      const winnerMessage = document.querySelector("#winnerMessage");
-      const winnerIcon = document.querySelector("#winnerIcon");
-      const boardContainer = document.querySelector(".grid");
-
-      //Game State
-      let board = ["", "", "", "", "", "", "", "", ""];
-      let currentPlayer = "X";
-      let gameActive = true;
-      let vsComputer = false;
-      let xScore = 0;
-      let oScore = 0;
-      let ties = 0;
-
-      //Initialize the game
-      function iniGame() {
-        createBoard();
-        updateGameStatus();
-      }
-
-      //Create the game board
-
-      function createBoard() {
-        boardContainer.innerHTML = "";
-        for (let i = 0; i < 9; i++) {
-          const cell = document.createElement("div");
-          cell.classList.add(
-            "cell",
-            "bg+gray-50",
-            "rounded-lg",
-            "shadow-sm",
-            "flex",
-            "items-center",
-            "justify-center",
-            "relative",
-            "cursor-pointer",
-            "aspect-square"
-          );
-          cell.setAttribute("data-index", i);
-          cell.addEventListener("click", () => handleCellClick(i));
-          boardContainer.appendChild(cell);
-        }
-      }
-
-      //handle cell click
-      function handleCellClick(index) {
-        if (!gameActive || board[index] !== " ") return;
-        makeMove(index, currentPlayer);
-        if (vsComputer && gameActive) {
-          setTimeout(() => {
-            const computerMove = getComputerMove();
-            if (computerMove !== 1) {
-              makeMove(computerMove, "O");
-            }
-          }, 500);
-        }
-      }
-
-      //Make a move
-      function makeMove(index, player) {
-        board[index] = player;
-        const cell = document.querySelector(`[data-index="${index}"]`);
-
-        if (player === "X") {
-          cell.classList.add("x-mark");
-          cell.innerHTML = `<i class= "fas fa-xmark text-5xl text-blue-500 opacity-0 animate-fade-in"></i>`;
-        } else {
-          cell.classList.add("o-mark");
-          cell.innerHTML = `<i class= "fas fa-circle text-4xl text-red-500 opacity-0 animate-fade-in"></i>`;
-        }
-        cell.classList.add("disabled");
-
-        //Check for winner or draw
-        const winningInfo = checkWin();
-        if (winningInfo) {
-          endGame(winningInfo);
-          return;
-        }
-        if (!board.includes("")) {
-          endGame(null);
-          return;
-        }
-        //Switch Player
-        currentPlayer = currentPlayer === "X" ? "O" : "X";
-        updateGameStatus();
-      }
-      function getComputerMove() {
-        // Simple AI - first try to win, then block, then random
-
-        // 1. Check for winning move
-        for (let i = 0; i < 9; i++) {
-          if (board[i] === "") {
-            board[i] = "O";
-            if (checkWin()?.winner === "O") {
-              board[i] = "";
-              return i;
-            }
-            board[i] = "";
-          }
-        }
-
-        // 2. Block opponent's winning move
-        for (let i = 0; i < 9; i++) {
-          if (board[i] === "") {
-            board[i] = "X";
-            if (checkWin()?.winner === "X") {
-              board[i] = "";
-              return i;
-            }
-            board[i] = "";
-          }
-        }
-
-        // 3. Take center if available
-        if (board[4] === "") return 4;
-
-        // 4. Take a corner if available
-        const corners = [0, 2, 6, 8];
-        const availableCorners = corners.filter((c) => board[c] === "");
-        if (availableCorners.length > 0) {
-          return availableCorners[Math.floor(Math.random() * availableCorners.length)];
-        }
-
-        // 5. Take any available spot
-        const availableSpots = board.map((val, idx) => (val === "" ? idx : null)).filter((val) => val !== null);
-
-        if (availableSpots.length > 0) {
-          return availableSpots[Math.floor(Math.random() * availableSpots.length)];
-        }
-
-        return null;
-      }
-
-      // Check for winner
-      function checkWin() {
-        const winPatterns = [
-          [0, 1, 2],
-          [3, 4, 5],
-          [6, 7, 8], // rows
-          [0, 3, 6],
-          [1, 4, 7],
-          [2, 5, 8], // columns
-          [0, 4, 8],
-          [2, 4, 6], // diagonals
-        ];
-
-        for (const pattern of winPatterns) {
-          const [a, b, c] = pattern;
-          if (board[a] && board[a] === board[b] && board[a] === board[c]) {
-            return { winner: board[a], pattern: pattern };
-          }
-        }
-
-        return null;
-      }
-
-      // End the game
-      function endGame(winningInfo) {
-        gameActive = false;
-
-        if (winningInfo) {
-          // Highlight winning cells
-          winningInfo.pattern.forEach((index) => {
-            const cell = document.querySelector(`[data-index="${index}"]`);
-            cell.classList.add("bg-green-100", "shadow-md");
-          });
-
-          // Update scores
-          if (winningInfo.winner === "X") {
-            xScore++;
-            xScoreElement.textContent = xScore;
-          } else {
-            oScore++;
-            oScoreElement.textContent = oScore;
-          }
-          showWinnerModal(winningInfo.winner);
-          return;
-        }
-        ties++;
-        showWinnerModal(null);
-      }
-      function showWinnerModal(winner) {
-        if (winner === "X") {
-          winnerText.textContent = "Player X Wins!";
-          winnerMessage.textContent = "Congratulations on your victory!";
-          winnerIcon.className =
-            "fas fa-trophy text-7xl mb-6 mx-auto w-24 h-24 flex items-center justify-center rounded-full bg-blue-100 text-blue-600";
-          winnerIcon.innerHTML = '<i class="fas fa-trophy"></i>';
-        } else if (winner === "O") {
-          winnerText.textContent = vsComputer ? "Computer Wins!" : "Player O Wins!";
-          winnerMessage.textContent = vsComputer ? "Better luck next time!" : "Congratulations on your victory!";
-          winnerIcon.className = "fas fa-robot text-7xl mb-6 mx-auto w-24 h-24 flex items-center justify-center rounded-full bg-red-100 text-red-600";
-          winnerIcon.innerHTML = '<i class="fas fa-robot"></i>';
-        } else {
-          winnerText.textContent = "It's a Draw!";
-          winnerMessage.textContent = "The game ended in a tie.";
-          winnerIcon.className =
-            "fas fa-handshake text-7xl mb-6 mx-auto w-24 h-24 flex items-center justify-center rounded-full bg-gray-100 text-gray-600";
-          winnerIcon.innerHTML = '<i class="fas fa-handshake"></i>';
-        }
-
-        winnerModal.classList.remove("hidden");
-      }
-
-      // Update game status UI
-      function updateGameStatusUI() {
-        if (currentPlayer === "X") {
-          turnText.textContent = "Player X's Turn";
-          turnIcon.className = "fas fa-xmark text-blue-500";
-          turnIcon.parentElement.classList.remove("text-red-500");
-          turnIcon.parentElement.classList.add("text-blue-500");
-        } else {
-          turnText.textContent = vsComputer ? "Computer's Turn" : "Player O's Turn";
-          turnIcon.className = "fas fa-robot text-red-500" + (vsComputer ? "" : " fas fa-circle text-red-500");
-          turnIcon.parentElement.classList.remove("text-blue-500");
-          turnIcon.parentElement.classList.add("text-red-500");
-        }
-      }
-      // Reset the game
-      function resetGame() {
-        board = ["", "", "", "", "", "", "", "", ""];
-        currentPlayer = "X";
-        gameActive = true;
-        createBoard();
-        updateGameStatus();
-        winnerModal.classList.add("hidden");
-      }
-
-      // Start a new game (return to menu)
-      function newGame() {
-        gameSelector.classList.remove("hidden");
-        gameContainer.classList.add("hidden");
-        resetGame();
-      }
-
-      // Event Listeners
-      friendBtn.addEventListener("click", () => {
-        vsComputer = false;
-        gameSelector.classList.add("hidden");
-        gameContainer.classList.remove("hidden");
-        gameMode.querySelector("span").textContent = "Vs Friend";
-        modeIcon.className = "fas fa-users";
-        resetGame();
-      });
-
-      botBtn.addEventListener("click", () => {
-        vsComputer = true;
-        gameSelector.classList.add("hidden");
-        gameContainer.classList.remove("hidden");
-        gameMode.querySelector("span").textContent = "Vs Computer";
-        modeIcon.className = "fas fa-robot";
-        resetGame();
-      });
-      homeBtn.addEventListener("clic", newGame);
-      initGame();
-    </script>
   </body>
 </html>
